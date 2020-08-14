@@ -1,0 +1,28 @@
+
+    
+  mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+    position: absolute;
+    margin-top: 30px;
+    right:35%;
+   top:10%;
+   height: 200px;
+   width: 35%;
+   align-items: center;
+   opacity: 1;
+  }
+  
+  mat-form-field {
+    display: block;
+    padding-top: 20px;
+    width: 70%;
+    left: 15%;
+  }
+ button{
+     margin-top: 45px;
+ }
+p{
+  padding-top: 20px;
+}

@@ -1,0 +1,97 @@
+{
+  "Customer": [
+    {
+      "id": 1,
+      "loanId":null,
+      "Name": "sujith kannan",
+      "Username": "suji2d",
+      "Password": "pass123",
+      "GuardianType": "Friend",
+      "GuardianName": "Ram",
+      "Address": "16,dubai kurukusandhu,dubai mairoad",
+      "Citizenship": " indian",
+      "State": "TN",
+      "Country": "India",
+      "EmailAddress": "abcd@gmail.com",
+      "Gender": "M",
+      "MartialStatus": "Single",
+      "ContactNo": "9876543210",
+      "DateOfBirth": "12/02/1997",
+      "RegistrationDate": "11/08/2020",
+      "AccountType": "Personal",
+      "BranchName": "Velachey",
+      "CitizenStatus": "Citzen",
+      "InitialDepositAmount": "200000",
+      "IdentificationProofType": "Licence",
+      "IdentificationDocumentNo": "12345",
+      "ReferenceAccountHolderName": "Ram",
+      "ReferenceAccountHolderAccNo": "123412341234",
+      "ReferenceAccountHolderAddress": "12,asdf,asdfg"
+    },
+    {
+      "id": 2,
+      "loanId":null,
+      "Name": "prashant",
+      "Username": "prash",
+      "Password": "pass789",
+      "GuardianType": "asd",
+      "GuardianName": "asd",
+      "Address": "asdasd",
+      "Citizenship": "asdasd",
+      "State": "sadad",
+      "Countrt": "sadsa",
+      "EmailAddress": "",
+      "Gender": "",
+      "MartialStatus": "",
+      "ContactNo": "",
+      "DateOfBirth": "",
+      "RegistrationDate": "",
+      "AccountType": "",
+      "BranchName": "",
+      "CitizenStatus": "",
+      "InitialDepositAmount": "",
+      "IdentificationProofType": "",
+      "IdentificationDocumentNo": "",
+      "ReferenceAccountHolderName": "",
+      "ReferenceAccountHolderAccNo": "",
+      "ReferenceAccountHolderAddress": ""
+    }
+],
+"LoanDetails":[
+  {
+    "id":1,
+    "loanType":"",
+    "loanAmount":"",
+    "loanApplyDate":"",
+    "loanIssueDate":"",
+    "rateOfInterest":"",
+    "durationOfTheLoan":"",
+    "loanTypeId":0
+  }
+],
+"EducationalLoan":[
+  {
+    "courseFee":null,
+    "course":null,
+    "fatherName":null,
+    "fatherOccupation":null,
+    "fathersTotalExp":null,
+    "fathersExpWithCuttentCompany":null,
+    "rationCardNo":null,
+    "annualIncome":null,
+    "id":0
+
+  }
+],
+"PersonaalOrHmeLone":[
+  {
+    "annualIncome":null,
+    "companyName":null,
+    "designation":null,
+    "totalExp":null,
+    "expWithCuttentCompany":null,
+    "id":0
+  }
+]
+
+}

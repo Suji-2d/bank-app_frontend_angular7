@@ -1,0 +1,195 @@
+<br>
+<h1>update your profile!</h1>
+<mat-container class="container">
+<mat-horizontal-stepper #stepper>
+ 
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="applyLoanForm" class="example-form">
+      <ng-template matStepLabel>Fill out General details</ng-template>
+     
+        <!-- <mat-label>Loan Type : </mat-label><mat-label>Loan Type : </mat-label>
+          <mat-radio-group (change)="changeGender()" [(ngModel)]="type" formControlName="loanType" aria-label="Select an option">
+            <mat-radio-button value="Educational Loan" >Educational Loan</mat-radio-button>
+            <mat-radio-button  value="Personal Loan"  >Personal Loan</mat-radio-button>
+          </mat-radio-group> -->
+      
+      <mat-grid-list cols="1" rowHeight="10:1">
+
+        <mat-grid-tile>
+          <mat-form-field appearance="fill" >
+            <mat-label>Loan Type : </mat-label>
+            <mat-select  matNativeControl (selectionChange)="changeGender()" [(ngModel)]="type" formControlName="loanType" required>
+              <mat-option value="Educational Loan">Educational Loan</mat-option>
+              <mat-option value="Personal Loan"  >Personal Loan</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </mat-grid-tile>
+       
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>loanAmount</mat-label>
+            <input matInput placeholder="enter name" formControlName="loanAmount">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>loanApplyDate</mat-label>
+            <input matInput placeholder="enter name" formControlName="loanApplyDate">
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Loan Issue Date</mat-label>
+            <input matInput placeholder="enter name" formControlName="loanIssueDate" required>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>rateOfInterest</mat-label>
+            <input matInput placeholder="enter name" formControlName="rateOfInterest" required>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>duration</mat-label>
+            <input matInput placeholder="enter name" formControlName="duration" required>
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <div>
+        <button mat-flat-button color="accent" matStepperNext>Next</button>
+      </div>
+    </form>
+    </mat-step>
+ 
+    <!-- <div *ngIf="selectedType;then thenForm else elseForm"> -->
+
+    <mat-step  [stepControl]="secondFormGroup" *ngIf="selectedLoanType">
+      <ng-template matStepLabel>Fill out Loan details</ng-template>
+     
+      <!-- <ng-template *ngIf="!selectedLoanType;else elseForm"> -->
+
+      <form  [formGroup]="educationalLoanForm"  class="example-form">   
+          <mat-grid-list cols="1" rowHeight="10:1">
+            <mat-grid-tile>
+              <mat-form-field>
+                <mat-label>courseFee</mat-label>
+                <input matInput placeholder="enter state" formControlName="courseFee" required>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field>
+                <mat-label>course</mat-label>
+                <input matInput placeholder="enter country" formControlName="course" required>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field>
+                <mat-label>fatherName</mat-label>
+                <input matInput placeholder="enter emailId" formControlName="fatherName" required>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field>
+                <mat-label>fatherOccupation</mat-label>
+                <input matInput placeholder="enter gender" formControlName="fatherOccupation" required>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field>
+                <mat-label>fatherTotalExperience</mat-label>
+                <input matInput placeholder="enter maritalStatus" formControlName="fatherTotalExperience" required>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field>
+                <mat-label>fatherCurrentExperience</mat-label>
+                <input matInput placeholder="enter contactNo" formControlName="fatherCurrentExperience" required>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field>
+                <mat-label>rationCardNo</mat-label>
+                <input matInput placeholder="enter dob" formControlName="rationCardNo" required>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field>
+                <mat-label>annualIncome</mat-label>
+                <input matInput placeholder="enter dob" formControlName="annualIncome" required>
+              </mat-form-field>
+            </mat-grid-tile>
+
+          </mat-grid-list>
+    
+          <div>
+            <button mat-flat-button color="warn" matStepperPrevious>Back</button>
+            <button mat-flat-button color="accent" matStepperNext>Next</button>
+          </div>
+        </form>
+ 
+<!-- </ng-template> -->
+      
+    </mat-step>
+       
+     
+        <mat-step  [stepControl]="ThirdFormGroup" *ngIf="!selectedLoanType">
+              <!-- <ng-template #elseForm> -->
+          <form [formGroup]="personalLoanForm" class="example-form">
+            <ng-template matStepLabel>Fill out Loan details</ng-template>
+          <mat-grid-list cols="1" rowHeight="10:1">
+            <mat-grid-tile>
+              <mat-form-field>
+                <mat-label>Personal</mat-label>
+                <input matInput placeholder="enter state" formControlName="annualIncome" required>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field>
+                <mat-label>Country</mat-label>
+                <input matInput placeholder="enter country" formControlName="companyName" required>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field>
+                <mat-label>Email Id</mat-label>
+                <input matInput placeholder="enter emailId" formControlName="designation" required>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field>
+                <mat-label>Gender</mat-label>
+                <input matInput placeholder="enter gender" formControlName="totalExperience" required>
+              </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <mat-form-field>
+                <mat-label>Marital Status</mat-label>
+                <input matInput placeholder="enter maritalStatus" formControlName="currentExperience" required>
+              </mat-form-field>
+            </mat-grid-tile>
+          </mat-grid-list>
+     
+          <div>
+            <button mat-flat-button color="warn" matStepperPrevious>Back</button>
+            <button mat-flat-button color="accent" matStepperNext>Next</button>
+          </div>
+      
+        </form>
+    
+              <!-- </ng-template> -->
+      </mat-step>
+    
+
+     
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p text-color="white">You are now done.</p>
+    <div>
+      <button mat-flat-button color="warn" matStepperPrevious>Back</button>
+      <button mat-flat-button color="primary" (click)=onFormSubmit()>Submit</button>
+      <button mat-flat-button color="warn" (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+</mat-container>

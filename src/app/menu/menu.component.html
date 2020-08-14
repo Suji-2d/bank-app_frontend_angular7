@@ -1,0 +1,8 @@
+<mat-toolbar class="nav">
+    
+    <span>Peoples Bank</span>
+    <span class="example-spacer"></span>
+    <button *ngIf="this.custAuth.isLoggedIn()" class="btn btn-primary"routerLink="/updateProfile">Update profile</button>
+    <button *ngIf="this.custAuth.isLoggedIn()" class="btn btn-primary"routerLink="/logout">Log Out</button>
+       
+  </mat-toolbar>

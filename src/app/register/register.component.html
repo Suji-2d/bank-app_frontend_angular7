@@ -1,0 +1,221 @@
+<br><h1>Sign-Up</h1>
+<mat-container class="container">
+<mat-horizontal-stepper class="stepper">
+  <form [formGroup]="registerForm" class="example-form">
+    <mat-step [stepControl]="firstFormGroup">
+      <ng-template matStepLabel>Fill out personal details</ng-template>
+      <mat-grid-list cols="1" rowHeight="18:1">
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="enter name" formControlName="name" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>UserName</mat-label>
+            <input matInput placeholder="enter user name" formControlName="userName" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="enter passwod" formControlName="password" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Guardian Name</mat-label>
+            <input matInput placeholder="enter guardianName" formControlName="guardianName" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Guardian Type</mat-label>
+            <input matInput placeholder="enter guardianType" formControlName="guardianType" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>citizenShip</mat-label>
+            <input matInput placeholder="enter citizenShip" formControlName="citizenShip" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Address</mat-label>
+            <input matInput placeholder="enter address" formControlName="address" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+
+      </mat-grid-list>
+      <div>
+        <button mat-flat-button color="accent" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <ng-template matStepLabel>Fill out personal details</ng-template>
+      <mat-grid-list cols="1" rowHeight="18:1">
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>State</mat-label>
+            <input matInput placeholder="enter state" formControlName="state" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Country</mat-label>
+            <input matInput placeholder="enter country" formControlName="country" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Email Id</mat-label>
+            <input matInput placeholder="enter emailId" formControlName="emailId" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Gender</mat-label>
+            <input matInput placeholder="enter gender" formControlName="gender" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Marital Status</mat-label>
+            <input matInput placeholder="enter maritalStatus" formControlName="maritalStatus" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Contact No.</mat-label>
+            <input matInput placeholder="enter contactNo" formControlName="contactNo" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>DOB</mat-label>
+            <input matInput placeholder="enter dob" formControlName="dateOfBirth" required>
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+      <div>
+        <button mat-flat-button color="warn" matStepperPrevious>Back</button>
+        <button mat-flat-button color="accent" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="firstFormGroup">
+      <ng-template matStepLabel>Fill out bank details</ng-template>
+      <mat-grid-list cols="1" rowHeight="18:1">
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Registration Date</mat-label>
+            <input matInput placeholder="enter registrationDate" formControlName="registrationDate" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>AccountT ype</mat-label>
+            <input matInput placeholder="enter accountType" formControlName="accountType" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Branch Name</mat-label>
+            <input matInput placeholder="enter branchName" formControlName="branchName" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Citizen Status</mat-label>
+            <input matInput placeholder="enter citizenStatus" formControlName="citizenStatus" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Initial Deposit Amount</mat-label>
+            <input matInput placeholder="enter initialDepositAmount" formControlName="initialDepositAmount" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Id Proof Type</mat-label>
+            <input matInput placeholder="enter idProofType" formControlName="idProofType" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Id Document No.</mat-label>
+            <input matInput placeholder="enter idDocumentNo" formControlName="idDocumentNo" required>
+          </mat-form-field>
+        </mat-grid-tile>
+
+      </mat-grid-list>
+      <div>
+        <button mat-flat-button color="warn" matStepperPrevious>Back</button>
+        <button mat-flat-button color="accent" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <ng-template matStepLabel>Fill out bank details</ng-template>
+      <mat-grid-list cols="1" rowHeight="18:1">
+
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Reference Account Name</mat-label>
+            <input matInput placeholder="enter referenceAccountName" formControlName="referenceAccountName" required>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Reference Account Number</mat-label>
+            <input matInput placeholder="enter referenceAccountNumber" formControlName="referenceAccountNumber"
+              required>
+          </mat-form-field>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <mat-form-field>
+            <mat-label>Reference Account Address</mat-label>
+            <input matInput placeholder="enter referenceAccountAddress" formControlName="referenceAccountAddress"
+              required>
+          </mat-form-field>
+        </mat-grid-tile>
+      </mat-grid-list>
+
+      <div>
+        <button mat-flat-button color="warn" matStepperPrevious>Back</button>
+        <button mat-flat-button color="accent" matStepperNext>Next</button>
+      </div>
+    </mat-step>
+  </form>
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    <p text-color="white">You are now done.</p>
+    <div>
+      <button mat-flat-button color="warn" matStepperPrevious>Back</button>
+      <button mat-flat-button color="primary" (click)=onFormSubmit()>Submit</button>
+      <button mat-flat-button color="warn" (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
+</mat-container>
